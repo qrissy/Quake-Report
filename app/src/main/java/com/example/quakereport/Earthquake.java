@@ -3,29 +3,46 @@ package com.example.quakereport;
 public class Earthquake {
 
     // The earthquake mag
-    private String magnitude;
+    private String mMagnitude;
 
     // The name of the city
-    private String location;
+    private String mLocation;
 
-    // Drawable resource ID
-    private String date;
+    /** Time of the earthquake */
+    private long mTimeInMilliseconds;
 
-    public Earthquake(String magnitude, String location, String date) {
-        this.magnitude = magnitude;
-        this.location = location;
-        this.date = date;
+    /**
+     * Constructs a new {@link Earthquake} object.
+     *
+     * @param magnitude is the magnitude (size) of the earthquake
+     * @param location is the city location of the earthquake
+     * @param timeInMilliseconds is the time in milliseconds (from the Epoch) when the
+     *  earthquake happened
+     */
+    public Earthquake(String magnitude, String location, long timeInMilliseconds) {
+        mMagnitude = magnitude;
+        mLocation = location;
+        mTimeInMilliseconds = timeInMilliseconds;
     }
 
+    /**
+     * Returns the magnitude of the earthquake.
+     */
     public String getMagnitude() {
-        return magnitude;
+        return mMagnitude;
     }
 
+    /**
+     * Returns the location of the earthquake.
+     */
     public String getLocation() {
-        return location;
+        return mLocation;
     }
 
-    public String getDate() {
-        return date;
+    /**
+     * Returns the time of the earthquake.
+     */
+    public long getTimeInMilliseconds() {
+        return mTimeInMilliseconds;
     }
 }
