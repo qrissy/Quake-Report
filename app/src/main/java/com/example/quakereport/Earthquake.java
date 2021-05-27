@@ -3,7 +3,7 @@ package com.example.quakereport;
 public class Earthquake {
 
     // The earthquake mag
-    private String mMagnitude;
+    private double mMagnitude;
 
     // The name of the city
     private String mLocation;
@@ -19,7 +19,7 @@ public class Earthquake {
      * @param timeInMilliseconds is the time in milliseconds (from the Epoch) when the
      *  earthquake happened
      */
-    public Earthquake(String magnitude, String location, long timeInMilliseconds) {
+    public Earthquake(double magnitude, String location, long timeInMilliseconds) {
         mMagnitude = magnitude;
         mLocation = location;
         mTimeInMilliseconds = timeInMilliseconds;
@@ -28,7 +28,7 @@ public class Earthquake {
     /**
      * Returns the magnitude of the earthquake.
      */
-    public String getMagnitude() {
+    public double getMagnitude() {
         return mMagnitude;
     }
 
