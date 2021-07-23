@@ -33,15 +33,11 @@ public class EarthquakeLoader extends AsyncTaskLoader<List<Earthquake>> {
 
     @Override
     protected void onStartLoading() {
-        Log.i(LOG_TAG, "TEST: onStartLoading() called ...");
         forceLoad();
     }
 
     @Override
     public List<Earthquake> loadInBackground() {
-
-        Log.i(LOG_TAG, "TEST: loadInBackground() called ...");
-
         if (mUrl == null) {
             return null;
         }
